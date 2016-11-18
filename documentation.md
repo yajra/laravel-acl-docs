@@ -1,3 +1,7 @@
+- Prologue
+    - [Contribution Guide](/docs/laravel-acl/{{version}}/contributing)
+    - [Security Issues](/docs/laravel-acl/{{version}}/security)
+
 - Getting Started
     - [Introduction](/docs/laravel-acl/{{version}}/introduction)
     - [Installation](/docs/laravel-acl/{{version}}/installation)
