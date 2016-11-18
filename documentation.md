@@ -2,6 +2,8 @@
     - [Introduction](/docs/laravel-acl/{{version}}/introduction)
     - [Installation](/docs/laravel-acl/{{version}}/installation)
     - [Usage](/docs/laravel-acl/{{version}}/usage)
+- Configuration
+    - [General Settings](/docs/laravel-acl/{{version}}/general-settings)
 - Middleware
     - [role](/docs/laravel-acl/{{version}}/middleware#role)
     - [permission](/docs/laravel-acl/{{version}}/middleware#permission)
