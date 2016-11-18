@@ -5,7 +5,7 @@ You can change the `Role` and `Permission` model to be used by the package on th
 The configuration file can be found at `config/acl.php`.
 
 ```php
-/return [
+return [
     /**
      * Role class used for ACL.
      */
