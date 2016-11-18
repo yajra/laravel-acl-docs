@@ -20,10 +20,17 @@ auth()->user()->isAdministrator();
 <a name="has-role"></a>
 ## hasRole($roleSlug)
 
-Check if user has the given role..
+Check if user has the given role.
+A user must have at least one role order for this to return `true`.
 
 ```php
 auth()->user()->hasRole('administrator');
+```
+
+Or pass an array of roles.
+
+```php
+auth()->user()->hasRole(['administrator', 'registered']);
 ```
 
 <a name="can"></a>
