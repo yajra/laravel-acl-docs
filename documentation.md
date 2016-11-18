@@ -1,0 +1,28 @@
+- Getting Started
+    - [Introduction](/docs/laravel-acl/{{version}}/introduction)
+    - [Installation](/docs/laravel-acl/{{version}}/installation)
+    - [Usage](/docs/laravel-acl/{{version}}/usage)
+- Middleware
+    - [role](/docs/laravel-acl/{{version}}/middleware#role)
+    - [permission](/docs/laravel-acl/{{version}}/middleware#permission)
+    - [canAtLeast](/docs/laravel-acl/{{version}}/middleware#can-at-least)
+- Authorization
+    - [isRole](/docs/laravel-acl/{{version}}/auth#is-role)
+    - [hasRole](/docs/laravel-acl/{{version}}/auth#has-role)
+    - [can](/docs/laravel-acl/{{version}}/auth#can)
+    - [canAtLeast](/docs/laravel-acl/{{version}}/auth#can-at-least)
+    - [canAccess](/docs/laravel-acl/{{version}}/auth#can-access)
+- Role Permissions
+    - [can](/docs/laravel-acl/{{version}}/role#can)
+    - [canAtLeast](/docs/laravel-acl/{{version}}/role#can-at-least)
+    - [getPermissions](/docs/laravel-acl/{{version}}/role#get-permissions)
+    - [assignPermission](/docs/laravel-acl/{{version}}/role#assign)
+    - [revokePermission](/docs/laravel-acl/{{version}}/role#revoke)
+    - [revokeAllPermissions](/docs/laravel-acl/{{version}}/role#revoke-all)
+    - [syncPermissions](/docs/laravel-acl/{{version}}/role#sync)
+- Blade Directives
+    - [can](/docs/laravel-acl/{{version}}/directives#can)
+    - [cannot](/docs/laravel-acl/{{version}}/directives#cannot)
+    - [canAtLeast](/docs/laravel-acl/{{version}}/directives#can-at-least)
+    - [isRole](/docs/laravel-acl/{{version}}/directives#is-role)
+    - [hasRole](/docs/laravel-acl/{{version}}/directives#has-role)
