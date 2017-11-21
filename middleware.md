@@ -11,6 +11,14 @@ Route::get('users/index', function() {
 })->middleware('role:administrator');
 ```
 
+For multiple roles, use `|` as the delimiter.
+
+```php
+Route::get('users/index', function() {
+	// ...
+})->middleware('role:administrator|cashier');
+```
+
 <a name="permission"></a>
 ## permission
 Check if the user has the given permission to access the route.
