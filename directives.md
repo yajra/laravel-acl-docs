@@ -34,12 +34,12 @@ In addition to the built-in directives, Laravel ACL provides `@canAtLeast`,  `@i
 ```
 
 <a name="is-role"></a>
-## @isRole($roleSlug)
+## @role($roleSlug)
 
 ```php
-@isRole('administrator')
+@role('administrator')
     <!-- The Current User is an Administrator -->
-@endIsRole
+@endRole
 ```
 
 <a name="has-role"></a>
