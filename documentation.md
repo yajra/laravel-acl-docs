@@ -31,6 +31,15 @@
     - [revokeAllPermissions](/docs/{{package}}/{{version}}/role#revoke-all)
     - [syncPermissions](/docs/{{package}}/{{version}}/role#sync)
 
+- User Permissions
+    - [getPermissions](/docs/{{package}}/{{version}}/permission-user#getPermissions)
+    - [grantPermission](/docs/{{package}}/{{version}}/permission-user#grant)
+    - [grantPermissionBySlug](/docs/{{package}}/{{version}}/permission-user#grant-slug)
+    - [grantPermissionByResource](/docs/{{package}}/{{version}}/permission-user#grant-resource)
+    - [revokePermission](/docs/{{package}}/{{version}}/permission-user#revoke)
+    - [revokeAllPermissions](/docs/{{package}}/{{version}}/permission-user#revoke-all)
+    - [syncPermissions](/docs/{{package}}/{{version}}/permission-user#sync)
+
 - Blade Directives
     - [can](/docs/{{package}}/{{version}}/directives#can)
     - [cannot](/docs/{{package}}/{{version}}/directives#cannot)
