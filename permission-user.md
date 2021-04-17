@@ -92,7 +92,7 @@ $user->revokeAllPermissions();
 Syncs the given permissions with the user. This will revoke any permissions not supplied.
 
 ```php
-$user = Role::find(1);
+$user = User::find(1);
 
 $user->syncPermissions(1);
 $user->syncPermissions([1, 2, 3]);
