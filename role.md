@@ -6,7 +6,11 @@ The bundled `Role` model has easy to use methods to manage and assign permission
 - [`canAtLeast([$permission])`](#can-at-least)
 - [`getPermissions()`](#get-permissions)
 - [`assignPermission($permissionId)`](#assign)
+- [`grantPermission($ids, array $attributes = [], $touch = true)`](#grant)
+- [`grantPermissionBySlug($slug)`](#grant-slug)
+- [`grantPermissionByResource($resource)`](#grant-resource)
 - [`revokePermission($permissionId)`](#revoke)
+- [`revokePermissionBySlug($slug)`](#revoke-slug)
 - [`revokeAllPermissions()`](#revoke-all)
 - [`syncPermissions([$permissionIds])`](#sync)
 
@@ -49,8 +53,42 @@ Assigns the given permission to the role.
 $role = Role::find(1);
 
 $role->assignPermission(1);
+```
 
-$role->save();
+<a name="grant"></a>
+## grantPermission($ids, array $attributes = [], $touch = true)
+Grant the given permission to the role.
+
+```php
+$role = Role::find(1);
+$role->grantPermission(1);
+
+$permissions = Permission::all();
+$role->grantPermission($permissions);
+```
+
+<a name="grant-slug"></a>
+## grantPermissionBySlug($slug)
+Grant the given permission slug to the role.
+
+```php
+$role = Role::find(1);
+$role->grantPermissionBySlug('create-post');
+
+$permissions = ['create-post', 'view-post'];
+$role->grantPermissionBySlug($permissions);
+```
+
+<a name="grant-resource"></a>
+## grantPermissionByResource($resource)
+Grant the given permission resource to the role.
+
+```php
+$role = Role::find(1);
+$role->grantPermissionByResource('Posts');
+
+$resources = ['Users', 'Posts'];
+$role->grantPermissionByResource($resources);
 ```
 
 <a name="revoke"></a>
@@ -62,7 +100,16 @@ $role = Role::find(1);
 
 $role->revokePermission(1);
 
-$role->save();
+```
+
+<a name="revoke-slug"></a>
+## revokePermissionBySlug($slug)
+Revokes the given permission slug from the role.
+
+```php
+$role = Role::find(1);
+
+$role->revokePermissionBySlug('create-post');
 ```
 
 <a name="revoke-all"></a>
@@ -73,8 +120,6 @@ Revokes all permissions from the role.
 $role = Role::find(1);
 
 $role->revokeAllPermissions();
-
-$role->save();
 ```
 
 <a name="sync"></a>
@@ -85,6 +130,4 @@ Syncs the given permissions with the role. This will revoke any permissions not 
 $role = Role::find(1);
 
 $role->syncPermissions([1, 2, 3]);
-
-$role->save();
 ```
