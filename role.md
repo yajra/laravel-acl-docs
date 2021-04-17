@@ -5,7 +5,6 @@ The bundled `Role` model has easy to use methods to manage and assign permission
 - [`can($permission)`](#can)
 - [`canAtLeast([$permission])`](#can-at-least)
 - [`getPermissions()`](#get-permissions)
-- [`assignPermission($permissionId)`](#assign)
 - [`grantPermission($ids, array $attributes = [], $touch = true)`](#grant)
 - [`grantPermissionBySlug($slug)`](#grant-slug)
 - [`grantPermissionByResource($resource)`](#grant-resource)
@@ -43,16 +42,6 @@ Retrieves an array of assigned permission slugs for the role.
 $role = Role::find(1);
 
 return $role->getPermissions();
-```
-
-<a name="assign"></a>
-## assignPermission($permissionId)
-Assigns the given permission to the role.
-
-```php
-$role = Role::find(1);
-
-$role->assignPermission(1);
 ```
 
 <a name="grant"></a>
