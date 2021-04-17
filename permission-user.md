@@ -14,9 +14,9 @@ class User extends Authenticatable
 - [`grantPermission($ids, array $attributes = [], $touch = true)`](#grant)
 - [`grantPermissionBySlug($slug)`](#grant-slug)
 - [`grantPermissionByResource($resource)`](#grant-resource)
-- [`revokePermission($permissionId)`](#revoke)
+- [`revokePermission($ids = null, $touch = true)($ids = null, $touch = true)`](#revoke)
 - [`revokeAllPermissions()`](#revoke-all)
-- [`syncPermissions([$permissionIds])`](#sync)
+- [`syncPermissions($ids, $detaching = true)`](#sync)
 
 
 <a name="get-permissions"></a>
@@ -66,13 +66,14 @@ $user->grantPermissionByResource($resources);
 ```
 
 <a name="revoke"></a>
-## revokePermission($permissionId)
+## revokePermission($ids = null, $touch = true)
 Revokes the given permission from the user.
 
 ```php
 $user = User::find(1);
 
 $user->revokePermission(1);
+$user->revokePermission([1, 2]);
 
 ```
 
@@ -87,11 +88,12 @@ $user->revokeAllPermissions();
 ```
 
 <a name="sync"></a>
-## syncPermissions([$permissionIds])
+## syncPermissions($ids, $detaching = true)
 Syncs the given permissions with the user. This will revoke any permissions not supplied.
 
 ```php
 $user = Role::find(1);
 
+$user->syncPermissions(1);
 $user->syncPermissions([1, 2, 3]);
 ```

@@ -9,10 +9,10 @@ The bundled `Role` model has easy to use methods to manage and assign permission
 - [`grantPermission($ids, array $attributes = [], $touch = true)`](#grant)
 - [`grantPermissionBySlug($slug)`](#grant-slug)
 - [`grantPermissionByResource($resource)`](#grant-resource)
-- [`revokePermission($permissionId)`](#revoke)
+- [`revokePermission($id = null, $touch = true)`](#revoke)
 - [`revokePermissionBySlug($slug)`](#revoke-slug)
 - [`revokeAllPermissions()`](#revoke-all)
-- [`syncPermissions([$permissionIds])`](#sync)
+- [`syncPermissions($ids, $detaching = true)`](#sync)
 
 <a name="can"></a>
 ## can($permission)
@@ -92,13 +92,14 @@ $role->grantPermissionByResource($resources);
 ```
 
 <a name="revoke"></a>
-## revokePermission($permissionId)
+## revokePermission($id = null, $touch = true)
 Revokes the given permission from the role.
 
 ```php
 $role = Role::find(1);
 
 $role->revokePermission(1);
+$role->revokePermission([1, 2]);
 
 ```
 
@@ -123,11 +124,12 @@ $role->revokeAllPermissions();
 ```
 
 <a name="sync"></a>
-## syncPermissions([$permissionIds])
+## syncPermissions($ids, $detaching = true)
 Syncs the given permissions with the role. This will revoke any permissions not supplied.
 
 ```php
 $role = Role::find(1);
 
+$role->syncPermissions(1);
 $role->syncPermissions([1, 2, 3]);
 ```
