@@ -30,6 +30,7 @@
     - [grantPermissionByResource](/docs/{{package}}/{{version}}/role#grant-resource)
     - [revokePermission](/docs/{{package}}/{{version}}/role#revoke)
     - [revokePermissionBySlug](/docs/{{package}}/{{version}}/role#revoke-slug)
+    - [revokePermissionByResource](/docs/{{package}}/{{version}}/role#revoke-resource)
     - [revokeAllPermissions](/docs/{{package}}/{{version}}/role#revoke-all)
     - [syncPermissions](/docs/{{package}}/{{version}}/role#sync)
 

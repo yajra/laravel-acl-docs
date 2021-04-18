@@ -10,6 +10,7 @@ The bundled `Role` model has easy to use methods to manage and assign permission
 - [`grantPermissionByResource($resource)`](#grant-resource)
 - [`revokePermission($id = null, $touch = true)`](#revoke)
 - [`revokePermissionBySlug($slug)`](#revoke-slug)
+- [`revokePermissionByResource($resource)`](#revoke-resource)
 - [`revokeAllPermissions()`](#revoke-all)
 - [`syncPermissions($ids, $detaching = true)`](#sync)
 
@@ -100,6 +101,16 @@ Revokes the given permission slug from the role.
 $role = Role::find(1);
 
 $role->revokePermissionBySlug('create-post');
+```
+
+<a name="revoke-resource"></a>
+## revokePermissionByResource($resource)
+Revokes the given permission resource from the role.
+
+```php
+$role = Role::find(1);
+
+$role->revokePermissionByResource('Posts');
 ```
 
 <a name="revoke-all"></a>
