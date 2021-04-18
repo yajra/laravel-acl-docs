@@ -21,7 +21,7 @@
     - [canAtLeast](/docs/{{package}}/{{version}}/auth#can-at-least)
     - [canAccess](/docs/{{package}}/{{version}}/auth#can-access)
 
-- Role Permissions
+- Role Permission
     - [can](/docs/{{package}}/{{version}}/role#can)
     - [canAtLeast](/docs/{{package}}/{{version}}/role#can-at-least)
     - [getPermissions](/docs/{{package}}/{{version}}/role#get-permissions)
@@ -34,7 +34,15 @@
     - [revokeAllPermissions](/docs/{{package}}/{{version}}/role#revoke-all)
     - [syncPermissions](/docs/{{package}}/{{version}}/role#sync)
 
-- User Permissions
+- Permission Role
+    - [attachRole](/docs/{{package}}/{{version}}/permission#attach-role)
+    - [attachRoleBySlug](/docs/{{package}}/{{version}}/permission#attach-role-slug)
+    - [revokeRole](/docs/{{package}}/{{version}}/permission#revoke-role)
+    - [revokeRoleBySlug](/docs/{{package}}/{{version}}/permission#revoke-role-slug)
+    - [revokeAllRoles](/docs/{{package}}/{{version}}/permission#revoke-all)
+    - [syncRoles](/docs/{{package}}/{{version}}/permission#sync-roles)
+
+- User Permission
     - [getPermissions](/docs/{{package}}/{{version}}/permission-user#getPermissions)
     - [grantPermission](/docs/{{package}}/{{version}}/permission-user#grant)
     - [grantPermissionBySlug](/docs/{{package}}/{{version}}/permission-user#grant-slug)
