@@ -16,7 +16,6 @@
     - [canAtLeast](/docs/{{package}}/{{version}}/middleware#can-at-least)
 
 - Authorization
-    - [isRole](/docs/{{package}}/{{version}}/auth#is-role)
     - [hasRole](/docs/{{package}}/{{version}}/auth#has-role)
     - [can](/docs/{{package}}/{{version}}/auth#can)
     - [canAtLeast](/docs/{{package}}/{{version}}/auth#can-at-least)
@@ -46,5 +45,4 @@
     - [can](/docs/{{package}}/{{version}}/directives#can)
     - [cannot](/docs/{{package}}/{{version}}/directives#cannot)
     - [canAtLeast](/docs/{{package}}/{{version}}/directives#can-at-least)
-    - [isRole](/docs/{{package}}/{{version}}/directives#is-role)
     - [hasRole](/docs/{{package}}/{{version}}/directives#has-role)

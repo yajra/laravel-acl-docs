@@ -22,7 +22,7 @@ Laravel ACL supports the built-in function of Laravel's [`Authorization`](https:
 
 ## Additional Directives
 
-In addition to the built-in directives, Laravel ACL provides `@canAtLeast`,  `@isRole` and `@hasRole` directives:
+In addition to the built-in directives, Laravel ACL provides `@canAtLeast`,  `@role` directives:
 
 <a name="can-at-least"></a>
 ## @canAtLeast([$permissions])
@@ -40,13 +40,4 @@ In addition to the built-in directives, Laravel ACL provides `@canAtLeast`,  `@i
 @role('administrator')
     <!-- The Current User is an Administrator -->
 @endRole
-```
-
-<a name="has-role"></a>
-## @hasRole($roleSlug)
-
-```php
-@hasRole('administrator')
-    <!-- The Current User have an administrator role -->
-@endHasRole
 ```

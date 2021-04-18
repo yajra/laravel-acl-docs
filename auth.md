@@ -2,21 +2,6 @@
 
 The following methods will become available from your `User` model once you use `HasRole` trait.
 
-<a name="is-role"></a>
-## isRole($roleSlug)
-
-Checks if the user is under the given role.
-
-```php
-auth()->user()->isRole('administrator');
-```
-
-You may also use magic methods:
-
-```php
-auth()->user()->isAdministrator();
-```
-
 <a name="has-role"></a>
 ## hasRole($roleSlug)
 
