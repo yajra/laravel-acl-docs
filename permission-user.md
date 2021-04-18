@@ -15,6 +15,7 @@ class User extends Authenticatable
 - [`grantPermissionBySlug($slug)`](#grant-slug)
 - [`grantPermissionByResource($resource)`](#grant-resource)
 - [`revokePermission($ids = null, $touch = true)($ids = null, $touch = true)`](#revoke)
+- [`revokePermissionBySlug($slug)`](#revoke-slug)
 - [`revokeAllPermissions()`](#revoke-all)
 - [`syncPermissions($ids, $detaching = true)`](#sync)
 
@@ -76,6 +77,20 @@ $user->revokePermission(1);
 $user->revokePermission([1, 2]);
 
 ```
+
+
+<a name="revoke-slug"></a>
+## revokePermissionBySlug($slug)
+Revokes the given permission by slug from the user.
+
+```php
+$user = User::find(1);
+
+$user->revokePermissionBySlug('create-posts');
+$user->revokePermissionBySlug(['create-posts', 'update-posts']);
+
+```
+
 
 <a name="revoke-all"></a>
 ##revokeAllPermissions()

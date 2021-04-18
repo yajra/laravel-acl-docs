@@ -29,6 +29,7 @@
     - [grantPermissionBySlug](/docs/{{package}}/{{version}}/role#grant-slug)
     - [grantPermissionByResource](/docs/{{package}}/{{version}}/role#grant-resource)
     - [revokePermission](/docs/{{package}}/{{version}}/role#revoke)
+    - [revokePermissionBySlug](/docs/{{package}}/{{version}}/role#revoke-slug)
     - [revokeAllPermissions](/docs/{{package}}/{{version}}/role#revoke-all)
     - [syncPermissions](/docs/{{package}}/{{version}}/role#sync)
 
@@ -38,6 +39,7 @@
     - [grantPermissionBySlug](/docs/{{package}}/{{version}}/permission-user#grant-slug)
     - [grantPermissionByResource](/docs/{{package}}/{{version}}/permission-user#grant-resource)
     - [revokePermission](/docs/{{package}}/{{version}}/permission-user#revoke)
+    - [revokePermissionBySlug](/docs/{{package}}/{{version}}/permission-user#revoke-slug)
     - [revokeAllPermissions](/docs/{{package}}/{{version}}/permission-user#revoke-all)
     - [syncPermissions](/docs/{{package}}/{{version}}/permission-user#sync)
 
