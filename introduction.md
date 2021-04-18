@@ -13,3 +13,4 @@ Laravel ACL brings support for the following ACL (Access Control List):
 - Every user can have zero or more roles.
 - Every role can have zero or more permissions.
 - Permissions are then inherited to the user through the user's assigned roles.
+- User can have zero or more permissions. (Available since v6)
