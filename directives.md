@@ -33,7 +33,7 @@ In addition to the built-in directives, Laravel ACL provides `@canAtLeast`,  `@r
 @endCanAtLeast
 ```
 
-<a name="is-role"></a>
+<a name="role"></a>
 ## @role($roleSlug)
 
 ```php

@@ -47,4 +47,4 @@
     - [can](/docs/{{package}}/{{version}}/directives#can)
     - [cannot](/docs/{{package}}/{{version}}/directives#cannot)
     - [canAtLeast](/docs/{{package}}/{{version}}/directives#can-at-least)
-    - [hasRole](/docs/{{package}}/{{version}}/directives#has-role)
+    - [role](/docs/{{package}}/{{version}}/directives#role)
