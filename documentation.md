@@ -1,27 +1,27 @@
-- Prologue
+- ## Prologue
     - [Contribution Guide](/docs/{{package}}/{{version}}/contributing)
     - [Security Issues](/docs/{{package}}/{{version}}/security)
 
-- Getting Started
+- ## Getting Started
     - [Introduction](/docs/{{package}}/{{version}}/introduction)
     - [Installation](/docs/{{package}}/{{version}}/installation)
     - [Usage](/docs/{{package}}/{{version}}/usage)
 
-- Configuration
+- ## Configuration
     - [General Settings](/docs/{{package}}/{{version}}/general-settings)
 
-- Middleware
+- ## Middleware
     - [role](/docs/{{package}}/{{version}}/middleware#role)
     - [permission](/docs/{{package}}/{{version}}/middleware#permission)
     - [canAtLeast](/docs/{{package}}/{{version}}/middleware#can-at-least)
 
-- Authorization
+- ## Authorization
     - [hasRole](/docs/{{package}}/{{version}}/auth#has-role)
     - [can](/docs/{{package}}/{{version}}/auth#can)
     - [canAtLeast](/docs/{{package}}/{{version}}/auth#can-at-least)
     - [canAccess](/docs/{{package}}/{{version}}/auth#can-access)
 
-- Role Permission
+- ## Role Permission
     - [can](/docs/{{package}}/{{version}}/role#can)
     - [canAtLeast](/docs/{{package}}/{{version}}/role#can-at-least)
     - [getPermissions](/docs/{{package}}/{{version}}/role#get-permissions)
@@ -34,7 +34,7 @@
     - [revokeAllPermissions](/docs/{{package}}/{{version}}/role#revoke-all)
     - [syncPermissions](/docs/{{package}}/{{version}}/role#sync)
 
-- Permission Role
+- ## Permission Role
     - [attachRole](/docs/{{package}}/{{version}}/permission#attach-role)
     - [attachRoleBySlug](/docs/{{package}}/{{version}}/permission#attach-role-slug)
     - [revokeRole](/docs/{{package}}/{{version}}/permission#revoke-role)
@@ -42,7 +42,7 @@
     - [revokeAllRoles](/docs/{{package}}/{{version}}/permission#revoke-all)
     - [syncRoles](/docs/{{package}}/{{version}}/permission#sync-roles)
 
-- User Permission
+- ## User Permission
     - [getPermissions](/docs/{{package}}/{{version}}/permission-user#getPermissions)
     - [grantPermission](/docs/{{package}}/{{version}}/permission-user#grant)
     - [grantPermissionBySlug](/docs/{{package}}/{{version}}/permission-user#grant-slug)
@@ -52,7 +52,7 @@
     - [revokeAllPermissions](/docs/{{package}}/{{version}}/permission-user#revoke-all)
     - [syncPermissions](/docs/{{package}}/{{version}}/permission-user#sync)
 
-- Blade Directives
+- ## Blade Directives
     - [can](/docs/{{package}}/{{version}}/directives#can)
     - [cannot](/docs/{{package}}/{{version}}/directives#cannot)
     - [canAtLeast](/docs/{{package}}/{{version}}/directives#can-at-least)
