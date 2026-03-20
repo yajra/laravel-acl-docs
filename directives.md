@@ -20,9 +20,10 @@ Laravel ACL supports the built-in function of Laravel's [`Authorization`](https:
 @endcannot
 ```
 
+<a name="additional-directives"></a>
 ## Additional Directives
 
-In addition to the built-in directives, Laravel ACL provides `@canAtLeast`,  `@role` directives:
+In addition to the built-in directives, Laravel ACL provides `@canAtLeast` and `@role` directives:
 
 <a name="can-at-least"></a>
 ## @canAtLeast([$permissions])

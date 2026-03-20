@@ -1,27 +1,35 @@
 # User Permissions
 
-User Permissions is an extended version of `HasRole` that allows us to directly add custom permissions to a `User`. To implement this setup, you need to extend `Yajra\Acl\Traits\HasRoleAndPermission` trait on your `User` model.
+User Permissions is an extended version of `HasRole` that allows us to directly add custom permissions to a `App\Models\User`. To implement this setup, you need to extend the `Yajra\Acl\Traits\HasRoleAndPermission` trait on your User model.
 
 ```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Yajra\Acl\Traits\HasRoleAndPermission;
+
 class User extends Authenticatable
 {
+    use HasFactory;
     use HasRoleAndPermission;
 }
-
 ```
 
 - [`getPermissions()`](#get-permissions)
 - [`grantPermission($ids, array $attributes = [], $touch = true)`](#grant)
 - [`grantPermissionBySlug($slug)`](#grant-slug)
 - [`grantPermissionByResource($resource)`](#grant-resource)
-- [`revokePermission($ids = null, $touch = true)($ids = null, $touch = true)`](#revoke)
+- [`revokePermission($ids = null, $touch = true)`](#revoke)
 - [`revokePermissionBySlug($slug)`](#revoke-slug)
 - [`revokeAllPermissions()`](#revoke-all)
 - [`syncPermissions($ids, $detaching = true)`](#sync)
 
-
 <a name="get-permissions"></a>
 ## getPermissions()
+
 Retrieves an array of assigned permission slugs for the user.
 
 ```php
@@ -32,6 +40,7 @@ return $user->getPermissions();
 
 <a name="grant"></a>
 ## grantPermission($ids, array $attributes = [], $touch = true)
+
 Grant the given permission to the user.
 
 ```php
@@ -44,6 +53,7 @@ $user->grantPermission($permissions);
 
 <a name="grant-slug"></a>
 ## grantPermissionBySlug($slug)
+
 Grant the given permission slug to the user.
 
 ```php
@@ -56,6 +66,7 @@ $user->grantPermissionBySlug($permissions);
 
 <a name="grant-resource"></a>
 ## grantPermissionByResource($resource)
+
 Grant the given permission resource to the user.
 
 ```php
@@ -68,6 +79,7 @@ $user->grantPermissionByResource($resources);
 
 <a name="revoke"></a>
 ## revokePermission($ids = null, $touch = true)
+
 Revokes the given permission from the user.
 
 ```php
@@ -75,12 +87,11 @@ $user = User::find(1);
 
 $user->revokePermission(1);
 $user->revokePermission([1, 2]);
-
 ```
-
 
 <a name="revoke-slug"></a>
 ## revokePermissionBySlug($slug)
+
 Revokes the given permission by slug from the user.
 
 ```php
@@ -88,12 +99,11 @@ $user = User::find(1);
 
 $user->revokePermissionBySlug('create-posts');
 $user->revokePermissionBySlug(['create-posts', 'update-posts']);
-
 ```
 
-
 <a name="revoke-all"></a>
-##revokeAllPermissions()
+## revokeAllPermissions()
+
 Revokes all permissions from the user.
 
 ```php
@@ -104,6 +114,7 @@ $user->revokeAllPermissions();
 
 <a name="sync"></a>
 ## syncPermissions($ids, $detaching = true)
+
 Syncs the given permissions with the user. This will revoke any permissions not supplied.
 
 ```php

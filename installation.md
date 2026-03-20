@@ -14,44 +14,59 @@ Laravel ACL can be installed with [Composer](http://getcomposer.org/doc/00-intro
 
 Run the following command in your project to get the latest version of the package:
 
+```bash
+composer require yajra/laravel-acl:"^13.0"
 ```
-composer require yajra/laravel-acl:"^12.0"
-```
+
+> **Note**: Laravel 13 auto-discovers service providers, so no manual registration is required.
 
 <a name="configuration"></a>
 ## Configuration
 
-### Service Provider
-Open the file ```config/app.php``` and then add following service provider.
+### Publishing Configuration
 
-```php
-'providers' => [
-    // ...
-    Yajra\Acl\AclServiceProvider::class,
-],
-```
+To publish the configuration file, run the following command:
 
-### Route Middleware
-Open the `Kernel.php` file in `app\Http\Kernel.php` and add this to used it as middleware :
-
-```php
-'canAtLeast' => \Yajra\Acl\Middleware\CanAtLeastMiddleware::class,
-'permission' => \Yajra\Acl\Middleware\PermissionMiddleware::class,
-'role' => \Yajra\Acl\Middleware\RoleMiddleware::class,
-```
-
-### Configuration
-> Note: This step is (optional) for the publication of configuration files.
-
-After completing the step above, use the following command to publish configuration settings:
-
-```
+```bash
 php artisan vendor:publish --tag=laravel-acl
 ```
 
-### Migrations
-You'll need to run the provided migrations against your database:
+This will publish the `config/acl.php` configuration file to your application.
+
+### Middleware Registration
+
+Laravel 13 uses `bootstrap/app.php` for middleware registration instead of `Kernel.php`. Add the middleware aliases to your `bootstrap/app.php` file:
 
 ```php
+<?php
+
+use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Configuration\Exceptions;
+use Illuminate\Foundation\Configuration\Middleware;
+
+return Application::configure(basePath: dirname(__DIR__))
+    ->withRouting(
+        web: __DIR__.'/../routes/web.php',
+        api: __DIR__.'/../routes/api.php',
+        commands: __DIR__.'/../routes/console.php',
+        health: '/up',
+    )
+    ->withMiddleware(function (Middleware $middleware) {
+        $middleware->alias([
+            'role' => \Yajra\Acl\Middleware\RoleMiddleware::class,
+            'permission' => \Yajra\Acl\Middleware\PermissionMiddleware::class,
+            'canAtLeast' => \Yajra\Acl\Middleware\CanAtLeastMiddleware::class,
+        ]);
+    })
+    ->withExceptions(function (Exceptions $exceptions) {
+        //
+    })->create();
+```
+
+### Migrations
+
+Migrations are automatically loaded from the package. Run the following command to create the required tables:
+
+```bash
 php artisan migrate
 ```

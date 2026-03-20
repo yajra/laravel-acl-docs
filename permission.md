@@ -11,6 +11,7 @@ The bundled `Permission` model has easy to use methods to manage and assign role
 
 <a name="attach-role"></a>
 ## attachRole($role)
+
 Attach the given role to permission.
 
 ```php
@@ -21,6 +22,7 @@ return $permission->attachRole(Role::find(1));
 
 <a name="attach-role-slug"></a>
 ## attachRoleBySlug($slug)
+
 Attach the given role slug to permission.
 
 ```php
@@ -31,6 +33,7 @@ return $permission->attachRoleBySlug('admin');
 
 <a name="revoke-role"></a>
 ## revokeRole($role)
+
 Revoke the given permission role.
 
 ```php
@@ -41,6 +44,7 @@ return $permission->revokeRole(Role::find(1));
 
 <a name="revoke-role-slug"></a>
 ## revokeRoleBySlug($slug)
+
 Revoke the given permission role by slug.
 
 ```php
@@ -51,7 +55,8 @@ return $permission->revokeRoleBySlug('admin');
 
 <a name="revoke-all"></a>
 ## revokeAllRoles()
-Revoke the all permission roles.
+
+Revoke all permission roles.
 
 ```php
 $permission = Permission::find(1);
@@ -61,6 +66,7 @@ return $permission->revokeAllRoles();
 
 <a name="sync-roles"></a>
 ## syncRoles($roles)
+
 Sync permission roles.
 
 ```php

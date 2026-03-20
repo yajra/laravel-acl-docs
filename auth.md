@@ -1,6 +1,6 @@
 # Authorization
 
-The following methods will become available from your `User` model once you use `HasRole` trait.
+The following methods will become available on your `App\Models\User` model once you use the `HasRole` trait.
 
 <a name="has-role"></a>
 ## hasRole($roleSlug)
