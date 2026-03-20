@@ -17,7 +17,6 @@
 
 - ## Authorization
     - [hasRole](/docs/{{package}}/{{version}}/auth#has-role)
-    - [can](/docs/{{package}}/{{version}}/auth#can)
     - [canAtLeast](/docs/{{package}}/{{version}}/auth#can-at-least)
     - [canAccess](/docs/{{package}}/{{version}}/auth#can-access)
 

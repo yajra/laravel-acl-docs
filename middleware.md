@@ -77,7 +77,7 @@ Route::get('/users', function () {
 })->middleware('permission:users.view|users.create');
 ```
 
-<a name="can-at-least-middleware"></a>
+<a name="can-at-least"></a>
 
 ### `canAtLeast`
 

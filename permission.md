@@ -84,7 +84,7 @@ $slugs = $user->getRoleSlugs();
 
 ## Attaching Roles
 
-<a name="attachrole"></a>
+<a name="attach-role"></a>
 
 ### `attachRole($role, $attributes, $touch)`
 
@@ -122,7 +122,7 @@ $user->attachRole(RoleEnum::Admin);
 $user->attachRole('admin', ['expires_at' => now()->addMonth()]);
 ```
 
-<a name="attachrolebyslug"></a>
+<a name="attach-role-slug"></a>
 
 ### `attachRoleBySlug($slug)`
 
@@ -143,7 +143,7 @@ $user->attachRoleBySlug('admin');
 
 ## Revoking Roles
 
-<a name="revokerole"></a>
+<a name="revoke-role"></a>
 
 ### `revokeRole($role, $touch)`
 
@@ -180,7 +180,7 @@ enum RoleEnum: string
 $detached = $user->revokeRole(RoleEnum::Admin);
 ```
 
-<a name="revokerolebyslug"></a>
+<a name="revoke-role-slug"></a>
 
 ### `revokeRoleBySlug($slug, $touch)`
 
@@ -205,7 +205,7 @@ $detached = $user->revokeRoleBySlug('admin');
 $detached = $user->revokeRoleBySlug(['admin', 'editor']);
 ```
 
-<a name="revokeallroles"></a>
+<a name="revoke-all"></a>
 
 ### `revokeAllRoles()`
 
@@ -223,7 +223,7 @@ $detached = $user->revokeAllRoles();
 
 ## Syncing Roles
 
-<a name="syncroles"></a>
+<a name="sync-roles"></a>
 
 ### `syncRoles($roles, $detaching)`
 

@@ -23,7 +23,7 @@ class User extends Authenticatable
 
 ## Getting Permissions
 
-<a name="get-permissions"></a>
+<a name="getPermissions"></a>
 
 ### `getPermissions()`
 
@@ -42,7 +42,7 @@ $permissions = $user->getPermissions();
 
 ## Granting Permissions
 
-<a name="grant-permission"></a>
+<a name="grant"></a>
 
 ### `grantPermission($permission, $attributes, $touch)`
 
@@ -88,7 +88,7 @@ enum PermissionEnum: string
 $user->grantPermission(PermissionEnum::CreatePost);
 ```
 
-<a name="grant-permission-by-slug"></a>
+<a name="grant-slug"></a>
 
 ### `grantPermissionBySlug($slug)`
 
@@ -112,7 +112,7 @@ $user->grantPermissionBySlug('create-post');
 $user->grantPermissionBySlug(['create-post', 'view-post']);
 ```
 
-<a name="grant-permission-by-resource"></a>
+<a name="grant-resource"></a>
 
 ### `grantPermissionByResource($resource)`
 
@@ -138,7 +138,7 @@ $user->grantPermissionByResource(['Users', 'Posts']);
 
 ## Revoking Permissions
 
-<a name="revoke-permission"></a>
+<a name="revoke"></a>
 
 ### `revokePermission($permission, $touch)`
 
@@ -175,7 +175,7 @@ $detached = $user->revokePermission(PermissionEnum::CreatePost);
 $detached = $user->revokePermission();
 ```
 
-<a name="revoke-permission-by-slug"></a>
+<a name="revoke-slug"></a>
 
 ### `revokePermissionBySlug($slug)`
 
@@ -223,7 +223,7 @@ $user->revokePermissionByResource('Posts');
 $user->revokePermissionByResource(['Users', 'Posts']);
 ```
 
-<a name="revoke-all-permissions"></a>
+<a name="revoke-all"></a>
 
 ### `revokeAllPermissions()`
 
@@ -242,7 +242,7 @@ $detached = $user->revokeAllPermissions();
 
 ## Syncing Permissions
 
-<a name="sync-permissions"></a>
+<a name="sync"></a>
 
 ### `syncPermissions($ids, $detaching)`
 

@@ -82,7 +82,7 @@ Display content if the user has **at least one** of the given permissions throug
 @endCanAtLeast
 ```
 
-<a name="role-directive"></a>
+<a name="role"></a>
 
 ### `@role($roleSlug)`
 

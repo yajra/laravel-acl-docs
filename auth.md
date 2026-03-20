@@ -23,7 +23,7 @@ class User extends Authenticatable
 
 ## Checking Roles
 
-<a name="hasrole-role"></a>
+<a name="has-role"></a>
 
 ### `hasRole($role)`
 
@@ -67,7 +67,7 @@ if ($user->hasRole(RoleEnum::Admin)) {
 
 ## Checking Permissions
 
-<a name="canaccess-acl"></a>
+<a name="can-access"></a>
 
 ### `canAccess($acl)`
 
