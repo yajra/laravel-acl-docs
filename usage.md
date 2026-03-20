@@ -1,12 +1,19 @@
+---
+title: "Usage"
+description: "Learn how to use HasRole and HasRoleAndPermission traits to add role and permission functionality to your User model."
+---
+
 # Usage
 
 <a name="has-role-trait"></a>
+
 ## HasRole trait
 
 Laravel ACL package comes bundled with a `HasRole` trait to be used within your `App\Models\User` model.
 This trait provides all the necessary functions to tie your users in with roles and permissions.
 
 <a name="example-user-model"></a>
+
 ### Example User Model
 
 ```php
@@ -49,12 +56,14 @@ class User extends Authenticatable
 ```
 
 <a name="has-role-and-permission-trait"></a>
+
 ## HasRoleAndPermission trait
 
 Laravel ACL package comes bundled with a `HasRoleAndPermission` trait that can be used within your `App\Models\User` model.
 This trait includes all the abilities from the `HasRole` trait with added functionalities that allow the `User` to have its own custom set of permissions.
 
 <a name="example-user-model-permissions"></a>
+
 ### Example User Model
 
 ```php

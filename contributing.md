@@ -1,3 +1,8 @@
+---
+title: "Contributing"
+description: "Learn how to contribute to Laravel ACL by following PSR standards and submitting pull requests."
+---
+
 # Contributing
 
 Contributions are **welcome** and will be fully **credited**.
@@ -5,6 +10,7 @@ Contributions are **welcome** and will be fully **credited**.
 We accept contributions via Pull Requests on [Github](https://github.com/yajra/laravel-acl).
 
 <a name="pull-requests"></a>
+
 ## Pull Requests
 
 - **[PSR-12 Coding Standard](https://www.php-fig.org/psr/psr-12/)** - The easiest way to apply the conventions is to install [PHP Code Sniffer](http://pear.php.net/package/PHP_CodeSniffer).

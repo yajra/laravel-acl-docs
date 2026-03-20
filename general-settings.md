@@ -1,3 +1,8 @@
+---
+title: "General Settings"
+description: "Configure Laravel ACL by customizing the Role and Permission models and cache settings."
+---
+
 # General Settings
 
 You can change the `Role` and `Permission` model to be used by the package on this configuration.

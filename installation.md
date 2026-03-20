@@ -1,14 +1,9 @@
+---
+title: "Installation"
+description: "Install and configure Laravel ACL package with Composer and publish configuration files."
+---
+
 # Installation
-
-- [Installation](#installation)
-    - [Installing Laravel ACL](#installing-laravel-acl)
-    - [Configuration](#configuration)
-
-<a name="installation"></a>
-## Installation
-
-<a name="installing-laravel-acl"></a>
-### Installing Laravel ACL
 
 Laravel ACL can be installed with [Composer](http://getcomposer.org/doc/00-intro.md). More details about this package in Composer can be found [here](https://packagist.org/packages/yajra/laravel-acl).
 
@@ -20,7 +15,6 @@ composer require yajra/laravel-acl:"^13.0"
 
 > **Note**: Laravel 13 auto-discovers service providers, so no manual registration is required.
 
-<a name="configuration"></a>
 ## Configuration
 
 ### Publishing Configuration
